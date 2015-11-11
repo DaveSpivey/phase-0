@@ -27,3 +27,8 @@ rm - delete a file
 help - isn't this just the Windows Powershell version of 'man'? if so, displays manual for command
 
 # Forking and Cloning
+My instructions for repos: creating, cloning and forking...
+
+Although we're about to really dive in to using git on the command line, starting on a project is very GUI-friendly. After logging in to your Github account (you have a Github account, right?) you'll see a set of navigation buttons on the top-right of the screen. Click the plus sign and select 'new repository' and give it a name. If you'd like to work on something that's already on Github, go to that project on the site and look in the top-right again for the 'Fork' button. After clicking, Github will create a new "forked" version of the project ready to clone for your own use. Look on the right of the page for "HTTPS clone url" and a text field. This is the url you'll need to clone this project to your computer, so copy it and head to Terminal. Navigate on the command line to the directory you'd like to place the project into and type "git clone URL", where URL is what you copied from Github. It'll take a second to process, but once it's finished, you've got a cloned version of the project on your own computer.
+
+It's important to fork repos because that creates a copy independent of the master, ready for editing so it doesn't mess with the project master. Setting up Github was pretty straightforward, and I'd say my only hesitations were in choosing between a cheeky user name and a professional one. I went with davespivey, and I'm not saying which one of those two that happens to be.
