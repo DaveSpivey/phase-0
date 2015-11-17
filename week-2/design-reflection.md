@@ -18,7 +18,7 @@ The 6 phases of web design as defined in the reading are:
 
 My personal site will be designed to establish a professional focus for my development career - to provide information about me to clients and potential employers as well as contact and social media info for collaboration with other professionals. Besides basic info and contacts, my site will host projects I've done to serve as an online portfolio. This content will address all 3 groups of anticipated viewers, or my audience (clients, employers, other developers). Here is my first quick sketch of a site map:
 
-![site-map](/imgs/site-map.jpg)
+![site-map](/week-2/imgs/site-map.jpg)
 
 As primary actions users can take from the home page, contact and portfolio will have priority. All pages branching from the index will be linked in a navigation bar, but these 2 will be specially highlighted with either a prominent link or call-to-action buttons.
 
