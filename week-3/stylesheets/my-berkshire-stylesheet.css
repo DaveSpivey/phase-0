@@ -1,0 +1,73 @@
+body {
+    color: #000080;
+}
+
+a {
+  color: #800080;
+}
+
+a:visited {
+  color: #ff0000;
+}
+
+ul li {
+    font-size: .5em;
+}
+
+ul li a {
+    font-size: 2em;
+}
+
+#list {
+    width: auto;
+    height: 450px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    line-height: 300%;
+}
+
+header {
+    font-weight: bold;
+    text-align: center;
+    border-bottom: solid black 1px;
+    padding-bottom: 5px;
+}
+
+span {
+    font-size: 2em;
+}
+
+section {
+    border-bottom: solid black 1px;
+    padding-bottom: 5px;
+}
+
+#geico {
+    text-align: center;
+    font-size: .5em;
+}
+
+#contact {
+    font-size: .75em;
+}
+
+footer {
+    font-size: .7em;
+}
+
+footer a {
+    font-size: 1.5em;
+}
+
+/*What is important to know when linking an external file (like a stylesheet) to an HTML file?
+You should know the file's path in relation to the file you're working on so they'll link successfully. It's also important to know how to be modular, or which information each file is responsible for.
+-What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+JSfiddle is a nice tool because you can see in real time as you make adjustments. My pair showed me how to do this in Chrome dev tools, too, which is nice because the browser renders it differently than JSfiddle. Not getting everything perfect is something I'll have to get used to, because things behaved in unexpected ways, for example font-size: 2em was different depending on if you'd already specified font-size: 0.5 em, because it's relative. CSS is gonna take lots of practice.
+-What CSS did you use to modify the element style (like size, color, etc.)
+We definitely used size, color, weight, align, size - and it still doesn't look exactly like the site.
+-Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+We included a few id's. The reason we didn't make them classes was because each time it was a specific section that we wanted to do a specific thing to, so it wouldn't make sense to need to have a whole class to apply to other elements.
+-When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+Weirdly, mine did. Some of the official stuff didn't make sense to me, like <center>, and I'm sure there's a reason for all of it to be there on such a simple looking site. But the Berkshire site uses styles like font size, color, width, etc. which obviously is the bad practice we've learned about.
+*/
