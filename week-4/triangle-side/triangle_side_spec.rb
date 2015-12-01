@@ -47,7 +47,7 @@ describe 'valid_triangle?' do
       triple.permutation(3).all? { |(a,b,c)| !valid_triangle?(a,b,c) }
     end).to be true
 
-    # If you're reading this, be careful.  The to be_true throws people off.
+    # If you're reading this, be careful. The to be_true throws people off.
     # This whole statement returns true if and only if valid_triangle? returns false
     # for every permutation of [1, 1, 2.01], which is what we're testing.
   end
