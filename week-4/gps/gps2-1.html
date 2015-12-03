@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="gps2-1.css">
-  <meta charset="UTF-8">
-</head>
-<body>
+  <head>
+    <title>Cheatsheet</title>
+    <link rel="stylesheet" type="text/css" href="gps2-1.css">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+    <h1>Git Cheatsheet</h1>
+  </header>
+  <section>
+  <ul>
+  <li class="command">git status</li>
+  <li class="command">git add [file]</li>
+  <li class="command">git commit -m</li>
+  <li class="function">lists all modified files to be committed</li>
+  <li class="function">snapshots the file in preparation for versioning</li>
+  <li class="function">records the file snapshots permanently in version history</li>
+  </ul>
+  </section>
 
+  <footer>
+  <p>
+  This is a footer
+  </p>
+  </footer>
 </body>
 </html>
+
+<!--
+  So I felt a little more confident with CSS positioning this time than last week, but this specific challenge stumped me on column-count. It seemed really counterintuitive to lock the whole section up in one element and then try to style the text.
+   We wanted to have the git commands be in one section and the explanations be a different element - that way styling would be easy. The instructions said to only use CSS, but we were unclear how untouched HTML should be, so we decided to go with the column-count thing.
+  Didn't really end up matching the definitions up visually, but at least we got the overflow working so they are ordered correctly.
+  -->
