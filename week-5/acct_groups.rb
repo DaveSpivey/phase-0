@@ -21,7 +21,10 @@ def acct_groups (cohort, grp_size = 4)
 
   num_of_grps = cohort.length / grp_size
   groups = {}
+<<<<<<< HEAD
    #set counter
+=======
+>>>>>>> master
   i = 1
 
   cohort.each do |name|
@@ -88,3 +91,5 @@ find_group("David Spivey", cohort_squirrels)
 # - What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
 
 # => Learned how to use divmod, but I don't think it's normally used in this context. Probably could've just used modulo in combo with index numbers or something.
+
+
