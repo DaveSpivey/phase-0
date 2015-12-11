@@ -21,10 +21,8 @@ def acct_groups (cohort, grp_size = 4)
 
   num_of_grps = cohort.length / grp_size
   groups = {}
-<<<<<<< HEAD
+
    #set counter
-=======
->>>>>>> master
   i = 1
 
   cohort.each do |name|
