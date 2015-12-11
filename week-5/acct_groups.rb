@@ -21,6 +21,10 @@ def acct_groups (cohort, grp_size = 4)
 
   num_of_grps = cohort.length / grp_size
   groups = {}
+<<<<<<< HEAD
+   #set counter
+=======
+>>>>>>> master
   i = 1
 
   cohort.each do |name|
@@ -68,4 +72,24 @@ find_group("David Spivey", cohort_squirrels)
 
 # Reflect
 
-#
+# - What was the most interesting and most difficult part of this challenge?
+
+# => Maybe deciding which way to do it, because I had several ideas.
+
+# - Do you feel you are improving in your ability to write pseudocode and break the problem down?
+
+# => I think so, although I change my mind a lot once I get coding. For now pseudocode is more of an ice breaker.
+
+# - Was your approach for automating this task a good solution? What could have made it even better?
+
+# => It was ok, the mechanism to loop back around after using up all the group #s was clunky in the first try, and divmod, although very cool and efficient, took some digging to find only the info we needed.
+
+# - What data structure did you decide to store the accountability groups in and why?
+
+# => It was hash no question this time, because the info wouldn't be useful to us if it weren't associative. We have to be able to find group by student or vice versa.
+
+# - What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+
+# => Learned how to use divmod, but I don't think it's normally used in this context. Probably could've just used modulo in combo with index numbers or something.
+
+
