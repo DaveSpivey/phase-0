@@ -35,26 +35,46 @@
 
 
 
-# Refactored Solution
+# Refactored Solution[0]
+
+# class Die
+#   def initialize(symbols)
+# #    attr_accessor :sides
+#     @symbols = symbols
+# #    @sides = @symbols.length
+#     if @symbols.empty?
+#       raise ArgumentError.new("Please enter arguments for die roll")
+#     end
+#   end
+
+#   def sides
+#     @symbols.length
+#   end
+
+#   def roll
+#     @symbols.sample
+#   end
+# end
+
+# Refactored Solution[1]
 
 class Die
-  def initialize(symbols)
-#    attr_accessor :sides
+
+    attr_reader :sides
+
+    def initialize(symbols)
     @symbols = symbols
-#    @sides = @symbols.length
+    @sides = @symbols.length
     if @symbols.empty?
       raise ArgumentError.new("Please enter arguments for die roll")
     end
-  end
-
-  def sides
-    @symbols.length
   end
 
   def roll
     @symbols.sample
   end
 end
+
 
 # Reflection
 
@@ -73,3 +93,5 @@ end
 # - What concepts about classes were you able to solidify in this challenge?
 
 # => I tried to remove the need for the #sides method by defining @sides in the initialize method and giving it an attr_reader. It didn't work so I commented it out and put #sides back in. I'm not happy about it, but at least I'll have my ears perked this week for what nuances in syntax or logic I was missing.
+
+# --- Update: Got it to work, problem was I was defining attr_reader within the initialize method, when it has to be stated outside.
