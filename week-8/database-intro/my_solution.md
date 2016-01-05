@@ -29,7 +29,7 @@ SELECT region_name FROM regions WHERE region_name LIKE '%Central';
 SELECT regions.region_name, states.state_name FROM states JOIN regions ON states.region_id=regions.id ORDER BY region_id;
 
 
-[outfit schema](outfit_schema_screenshot.png)
+![outfit schema](outfit_schema_screenshot.png)
 
 
 Reflection:
