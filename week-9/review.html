@@ -88,7 +88,7 @@
       var addItem = document.getElementById("add").value;
       var remItem = document.getElementById("rem").value;
 
-      if (addItem != "") {
+      function increment() {
         if (groceries.hasOwnProperty(addItem)) {
           groceries[addItem] ++;
           var edit = document.getElementsByClassName(addItem);
@@ -103,7 +103,7 @@
         list.appendChild(element);
       }
 
-      if (remItem != "") {
+      function decrement() {
         if (groceries[remItem] === 1) {
           var remSelect = document.getElementsByClassName(remItem);
           list.removeChild(remSelect[0]);
@@ -116,7 +116,14 @@
           edit[0].innerHTML = (remItem + ": " + groceries[remItem]);
         }
       }
+
+      if (addItem != "") {
+        increment();
+      } else if (remItem != "") {
+        decrement();
+      }
     }
+
   </script>
 </body>
 </html>
