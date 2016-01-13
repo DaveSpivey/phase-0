@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <head>
   <title>JS Grocery List</title>
   <meta charset="utf-8">
 </head>
 <body>
-  <article id="page"></article>
+  <article id="page"><h1>Grocery List</h1></article>
 
   Add item: <input type="text" name="add" id="add"><br>
   Remove item: <input type="text" name="rem" id="rem"><br>
@@ -25,10 +25,9 @@
 
       if (addItem != "") {
         if (groceries.hasOwnProperty(addItem)) {
-          // alert(addItem + ": " + groceries[addItem]);
           groceries[addItem] ++;
-          item.nodeValue = (addItem + ": " + groceries[addItem]);
-          alert(item.nodeValue);
+          var edit = document.getElementsByClassName(addItem);
+          edit[0].innerHTML = (addItem + ": " + groceries[addItem]);
         } else {
           groceries[addItem] = 1;
           var element = document.createElement("li");
@@ -37,16 +36,104 @@
         }
         element.appendChild(item);
         list.appendChild(element);
-        // alert(item.nodeValue);
       }
 
       if (remItem != "") {
-        var remSelect = document.getElementsByClassName(remItem);
-        // list.removeChild(remSelect);
-        var arrFromList = Array.prototype.slice.call(remSelect);
-        arrFromList[0].remove();
+        if (groceries[remItem] === 1) {
+          var remSelect = document.getElementsByClassName(remItem);
+          var arrFromList = Array.prototype.slice.call(remSelect);
+          arrFromList[0].remove();
+        } else if (groceries[remItem] > 1) {
+          groceries[remItem] -= 1;
+          var edit = document.getElementsByClassName(remItem);
+          edit[0].innerHTML = (remItem + ": " + groceries[remItem]);
+        }
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!-- REFACTOR -->
+
+<!DOCTYPE html>
+<head>
+  <title>JS Grocery List</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <style>
+    article {background-color: #ffeebb; min-height: 16em; min-width: 30%; margin: 5% 35% 0 35%; border: solid black 1px;
+      font-size: 2em;}
+    article h1 {text-align: center; text-decoration: underline}
+    input {font-size: 1.5em;}
+  </style>
+  <article id="page"><h1>Grocery List</h1></article>
+
+  Add item: <input type="text" name="add" id="add"><br>
+  Remove item: <input type="text" name="rem" id="rem"><br>
+  <input type="submit" value="Submit" onClick="update()">
+
+
+  <script>
+
+    var groceries = {};
+
+    var list = document.createElement("ul");
+    document.getElementById("page").appendChild(list);
+
+    function update() {
+
+      var addItem = document.getElementById("add").value;
+      var remItem = document.getElementById("rem").value;
+
+      if (addItem != "") {
+        if (groceries.hasOwnProperty(addItem)) {
+          groceries[addItem] ++;
+          var edit = document.getElementsByClassName(addItem);
+          edit[0].innerHTML = (addItem + ": " + groceries[addItem]);
+        } else {
+          groceries[addItem] = 1;
+          var element = document.createElement("li");
+          element.className = addItem;
+          var text = document.createTextNode(addItem + ": " + groceries[addItem]);
+        }
+        element.appendChild(text);
+        list.appendChild(element);
+      }
+
+      if (remItem != "") {
+        if (groceries[remItem] === 1) {
+          var remSelect = document.getElementsByClassName(remItem);
+          list.removeChild(remSelect[0]);
+          // remSelect[0].remove();
+          // above .remove() not supported universally
+          delete groceries[remItem];
+        } else if (groceries[remItem] > 1) {
+          groceries[remItem] --;
+          var edit = document.getElementsByClassName(remItem);
+          edit[0].innerHTML = (remItem + ": " + groceries[remItem]);
+        }
       }
     }
   </script>
 </body>
 </html>
+
+<!-- Reflection -->
+
+<!-- What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors, etc.)
+
+Learned about using JS to manipulate DOM elements. It's similar to objects in JS, but much more like CSS selectors.
+Only light use of a JS {object} in my version of this exercise, but I think I learned much more this way.
+
+=> What was the most difficult part of this challenge?
+
+Figuring out how the whole thing works! There is a lot of new syntax and explicit logic that wasn't inuitive.
+Spent loads of time in docs researching this one.
+
+=> Did an array or object make more sense to use and why?
+
+Not much of either, but my 'groceries' object did come in handy for variable reference.
+-->
